@@ -1,6 +1,5 @@
-<%@quizzes.each |quiz| do %>
+<% @quizzes.each do |quiz| %>
 
-  <%= link_to quiz.title, quiz %><br>
-  <%= quiz.author %>
+	<%=quiz.title %> 
 
 <% end %>
