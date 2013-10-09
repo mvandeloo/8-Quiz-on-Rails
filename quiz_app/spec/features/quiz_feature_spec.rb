@@ -22,7 +22,7 @@ require 'spec_helper'
 	describe 'an individual quiz' do
 		it 'has its own page' do
 		visit '/quizzes'
-		click_link 'Some quiz', :match => :first
+		click_link 'Some quiz'
 		expect(current_path).to eq '/quizzes/1'
 		expect(page).to have_css 'h1', text: 'Some quiz'
 		end
