@@ -8,4 +8,13 @@ class QuizzesController < ApplicationController
 		@quiz = Quiz.find(params[:id])
 	end
 
+	def new
+		@quiz = Quiz.new
+	end
+
+	def create
+		quiz = Quiz.create(params[:quiz].permit(:title))
+		redirect_to quiz
+	end	
+
 end
